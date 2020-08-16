@@ -1,0 +1,52 @@
+<!--
+<div class="container">
+			<form #loginForm ="ngForm" (ngSubmit)="loginSubmit1(loginForm.value)">
+			<div class="sign-in-htm" >		
+				<div class="group">
+					<label for="user" class="label">MailId</label>
+					<input id="user" type="text" class="input" name="mailId" [(ngModel)]="user.mailId">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password" name="password" [(ngModel)]="user.password">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In" [disabled]="!loginForm.valid" >
+				</div>
+			</div>
+		</form>
+		<a routerLink="/register">Sign Up</a>
+</div>
+
+
+-->
+
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+	
+<br />
+<br />
+<br />
+<legend>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign In</legend>
+<div class="container">
+<form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit(loginForm.value)" nonvalidate>
+
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+ <input type="text" class="form-control" name="mailId" [(ngModel)]='user.mailId' required placeholder="mailId" ><br/>
+  </div>
+
+ <div class="input-group">
+ <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+ <input type="password" class="form-control" name="password" [(ngModel)]='user.password' required placeholder="password"><br/>
+  </div>
+<br />
+ <button class="btn btn-primary" [disabled] = "!loginForm.valid"> Login</button>
+
+</form>
+<button class="btn btn-primary" routerLink="/register">SignUp</button>
+
+</div>
